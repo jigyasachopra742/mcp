@@ -107,6 +107,7 @@ public class ServerStartCommandTests(ITestOutputHelper output) : IAsyncLifetime
         }
     }
 
+    [LiveTestOnly]
     [Fact]
     public async Task DefaultMode_CanCallSubscriptionList()
     {
@@ -337,6 +338,7 @@ public class ServerStartCommandTests(ITestOutputHelper output) : IAsyncLifetime
         Output.WriteLine($"Namespace proxy mode with [documentation, keyvault, storage] loaded {toolNames.Count} tools");
     }
 
+    [LiveTestOnly]
     [Fact]
     public async Task NamespaceProxyMode_StorageToolLearnMode_ReturnsStorageCommands()
     {

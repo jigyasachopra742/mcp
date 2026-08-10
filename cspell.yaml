@@ -229,6 +229,7 @@ dictionaryDefinitions:
       - "skus"
       - "slnx"
       - "sourcebranch"
+      - "sourcecommitid"
       - "specversion"
       - "sqlserver"
       - "ssword"
@@ -238,6 +239,7 @@ dictionaryDefinitions:
       - "stylecop"
       - "subdir"
       - "systempool"
+      - "targetbranch"
       - "targetdir"
       - "test_test_pmc2pc1.vmsr_uat_beta"
       - "testareas"
@@ -352,6 +354,7 @@ words:
   - cicd
   - cloudarchitect
   - codeium
+  - codemods
   - codesign
   - codespace
   - cognitiveservices
@@ -398,6 +401,7 @@ words:
   - filesystem
   - filesystems
   - fnames
+  - frontmatter
   - functionapp
   - grpcio
   - gsaascend
@@ -484,6 +488,7 @@ words:
   - pscore
   - pscustomobject
   - pullrequest
+  - pypi
   - ragrs
   - ragzrs
   - rainfly
@@ -496,6 +501,7 @@ words:
   - rhvm
   - rulesets
   - runtimes
+  - sandboxing
   - sapase
   - saphana
   - serverfarms
@@ -532,6 +538,7 @@ words:
   - upns
   - userassigned
   - usersession
+  - vally
   - vectorizable
   - virtualdesktop
   - virtualmachine

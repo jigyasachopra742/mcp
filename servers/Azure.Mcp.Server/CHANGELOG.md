@@ -2,19 +2,15 @@
 
 The Azure MCP Server updates automatically by default whenever a new release comes out 🚀. We ship updates twice a week on Tuesdays and Thursdays 😊
 
-## 3.0.0-beta.34 (2026-08-06)
+## 3.0.0-beta.34 (Unreleased)
 
 ### Features Added
 
-- Added `azmcp advisor metadata get` to retrieve the global Azure Advisor recommendation-type metadata catalog entry (by recommendation type id) from Azure Resource Graph. [[#3178](https://github.com/microsoft/mcp/pull/3178)]
-
 ### Breaking Changes
 
-- Renamed advisor_recommendation-type_list to advisor_metadata_list and moved recommendation-type discovery from the Advisor ARM API to the global Azure Resource Graph metadata catalog with richer localized details and filters for subcategory, Service Health tracking ID, and service-retirement date. Service-retirement filters (tracking ID or retirement date) apply to the ServiceUpgradeAndRetirement subcategory, and conflicting subcategory filters are rejected. [[#3197](https://github.com/microsoft/mcp/pull/3197)]
+### Bugs Fixed
 
 ### Other Changes
-
-- Added new telemetry collection for 'IsLearn' (indicates if the tool call attempted learning), 'ToolSource' (indication on where the invoked tool is from), 'ToolParameters' (the names of the tool parameters), and 'ToolAnnotations' (the annotations of the tool). [[#3156](https://github.com/microsoft/mcp/pull/3156)]
 
 ## 3.0.0-beta.33 (2026-08-06)
 
@@ -205,8 +201,6 @@ The Azure MCP Server updates automatically by default whenever a new release com
 - `foundryextensions resource-get` routing and terminology were clarified to improve namespace tool selection confidence, and validation now fails fast when `--resource-name` is provided without `--resource-group`. [[#2961](https://github.com/microsoft/mcp/pull/2961)]
 
 ### Other Changes
-
-- Added a [vally](https://microsoft.github.io/vally) evaluation harness under `servers/Azure.Mcp.Server/tests/Vally` with a first experiment for the `eventhubs_eventhub_get` and `eventhubs_namespace_get` tools. A discovery-based runner script (`Invoke-VallyEval.ps1`) walks the directory for evaluations organized by area (namespace subfolder) and tool (`<tool>.experiment.yaml`). Each experiment runs a shared eval spec (`<tool>.eval.yaml`) as two variants—baseline (without the Azure MCP server) and treatment (with it)—to isolate the server's contribution. Both variants are graded identically on task outcome using outcome-based LLM-judge graders, ensuring a fair comparison regardless of whether the baseline succeeds through other means (e.g. Azure CLI). Each area may supply `New-*Resources.ps1` / `Remove-*Resources.ps1` provisioning scripts (auto-discovered and run per area); the Event Hubs pair creates the required resources (tagged with `DeleteAfter` as a clean-up safety net, with local auth disabled for Safe Secrets Standard compliance) and deletes them afterwards.
 
 ## 3.0.0-beta.21 (2026-06-23)
 
